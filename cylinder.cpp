@@ -42,17 +42,15 @@ Cylinder::Cylinder(Circle circle, int height)
 }
 
 /*
-Summary: Overloaded shift operator to print a cylinder
+Summary: Overloaded print function to print a cylinder
 Begin:
    print the cylinder center, radius, height and volume
 End
 */
-std::ostream& operator<<(std::ostream& os, const Cylinder& c) {
-    // print the cylinder center, radius, height and volume
-    os << "Cylinder with center = (" << c.m_x << ", " << c.m_y << ")"
+void Cylinder::print(std::ostream& os) {
+    os << "Cylinder with center = (" << this->m_x << ", " << this->m_y << ")"
        << "; "
-       << "Radius = " << c.m_radius << "; "
-       << "Height = " << c.m_height << "; "
-       << "Volume = " << c.m_volume;
-    return os;
+       << "Radius = " << this->m_radius << "; "
+       << "Height = " << this->m_height << "; "
+       << "Volume = " << this->m_volume;
 }

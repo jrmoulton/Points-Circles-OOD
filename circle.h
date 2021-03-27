@@ -13,7 +13,7 @@ class Circle : public Point {
     Circle(int x, int y, int radius);
     Circle(Point point, int radius);
     int get_radius() { return m_radius; }
-    friend std::ostream& operator<<(std::ostream& os, const Circle& c);
+    void print(std::ostream& os);
 
    protected:
     int m_radius;

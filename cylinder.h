@@ -12,7 +12,7 @@ class Cylinder : public Circle {
     Cylinder(int x, int y, int radius, int height);
     Cylinder(Point point, int radius, int height);
     Cylinder(Circle circle, int height);
-    friend std::ostream& operator<<(std::ostream& os, const Cylinder& c);
+    void print(std::ostream& os);
 
    protected:
     int m_height;

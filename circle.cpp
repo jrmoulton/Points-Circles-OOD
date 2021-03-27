@@ -28,16 +28,14 @@ Circle::Circle(Point point, int radius) : Point(point), m_radius(radius) {
 }
 
 /*
-Summary: Overloaded shift operator to print a circle
+Summary: Overloaded print function to print a circle
 Begin:
    print circle center, radius and area
 End
 */
-std::ostream& operator<<(std::ostream& os, const Circle& c) {
-    // print circle center, radius and area
-    os << "Circle with center = (" << c.m_x << ", " << c.m_y << ")"
+void Circle::print(std::ostream& os) {
+    os << "Circle with center = (" << this->m_x << ", " << this->m_y << ")"
        << "; "
-       << "Radius = " << c.m_radius << "; "
-       << "Area = " << c.m_area;
-    return os;
+       << "Radius = " << this->m_radius << "; "
+       << "Area = " << this->m_area;
 }

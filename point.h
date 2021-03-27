@@ -5,14 +5,15 @@
 
 #include <iostream>
 
-class Point {
+#include "shape.h"
+
+class Point : public Shape {
    public:
     Point(){};
     Point(int x, int y);
     int get_x() { return m_x; }
     int get_y() { return m_y; }
-
-    friend std::ostream& operator<<(std::ostream& os, const Point& p);
+    void print(std::ostream& os);
 
    protected:
     int m_x, m_y;

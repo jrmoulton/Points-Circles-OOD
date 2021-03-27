@@ -6,12 +6,11 @@
 Point::Point(int x, int y) : m_x(x), m_y(y){};
 
 /*
-Summary: Overlaoded shift operator to print out the point
+Summary: Overlaoded print function to print out the point
 Begin:
    Print the point with text
 End
 */
-std::ostream& operator<<(std::ostream& os, const Point& p) {
-    os << "Point at (" << p.m_x << ", " << p.m_y << ")";
-    return os;
+void Point::print(std::ostream& os) {
+    os << "Point at (" << this->m_x << ", " << this->m_y << ")";
 }
